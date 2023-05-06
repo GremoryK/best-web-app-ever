@@ -4,7 +4,7 @@ import {Button} from "@mui/material";
 
 const MyButton = () => {
     return (
-        <Button variant="text"></Button>
+        <Button variant="text">Подробнее</Button>
     );
 };
 

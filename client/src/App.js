@@ -6,8 +6,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <MyHeader />
-          <MyCarousel />
       </header>
+        <MyCarousel />
     </div>
   );
 }

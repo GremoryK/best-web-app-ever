@@ -42,3 +42,21 @@ const component_type = sequelize.define('component_type', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     name: {type: DataTypes.STRING}
 })
+
+user.hasOne(user_info)
+user_info.belongsTo(user)
+
+user.hasMany(user_starred_article)
+user_starred_article.belongsTo(user)
+
+user.hasMany(article)
+article.belongsTo(user)
+
+article.hasMany(user_starred_article)
+user_starred_article.belongsTo(article)
+
+article.hasMany(article_component)
+article_component.belongsTo(article)
+
+component_type.hasMany(article_component)
+article_component.belongsTo(component_type)

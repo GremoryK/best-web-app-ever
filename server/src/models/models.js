@@ -60,3 +60,12 @@ article_component.belongsTo(article)
 
 component_type.hasMany(article_component)
 article_component.belongsTo(component_type)
+
+module.exports = {
+    user,
+    user_info,
+    user_starred_article,
+    article,
+    article_component,
+    component_type
+}

@@ -11,7 +11,7 @@ const MyBreadcrumbs = () => {
                 Курсы
             </Link>
             <Link underline="hover" color="white" href="#">
-                Новости
+                Статьи
             </Link>
             <Link underline="hover" color="white" href="#">
                 Вход

@@ -1,6 +1,5 @@
-const {Article, ArticleComponent, ComponentType} = require('../models/models')
+const {Article} = require('../models/models')
 const ApiError = require('../error/ApiError')
-const uuid = require('uuid')
 
 class articleController {
     async create(req, res, next){

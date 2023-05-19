@@ -26,21 +26,11 @@ const UserStarredArticle = sequelize.define('user_starred_article', {
 
 const Article = sequelize.define('article', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    userId: {type: DataTypes.INTEGER,},
+    userId: {type: DataTypes.INTEGER},
+    type: {type: DataTypes.STRING},
     name: {type: DataTypes.STRING},
+    content: {type: DataTypes.JSONB},
     isChecked: {type: DataTypes.BOOLEAN},
-})
-
-const ArticleComponent = sequelize.define('article_component', {
-    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    component_type_id: {type: DataTypes.INTEGER,},
-    articleId: {type: DataTypes.INTEGER},
-    componentContent: {type: DataTypes.STRING},
-})
-
-const ComponentType = sequelize.define('component_type', {
-    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    name: {type: DataTypes.STRING},
 })
 
 User.hasOne(UserInfo)
@@ -55,17 +45,9 @@ Article.belongsTo(User)
 Article.hasMany(UserStarredArticle)
 UserStarredArticle.belongsTo(Article)
 
-Article.hasMany(ArticleComponent)
-ArticleComponent.belongsTo(Article)
-
-ComponentType.hasMany(ArticleComponent)
-ArticleComponent.belongsTo(ComponentType)
-
 module.exports = {
     User,
     UserInfo,
     UserStarredArticle,
     Article,
-    ArticleComponent,
-    ComponentType,
 }

@@ -5,72 +5,62 @@ const uuid = require('uuid')
 class articleController {
     async create(req, res, next){
         try {
-            let {name, price, brandId, typeId, info} = req.body
-            const {img} = req.files
-            let fileName = uuid.v4() + ".jpg"
-            img.mv(path.resolve(__dirname, '..', 'static', fileName))
-            const device = await Device.create({name, price, brandId, typeId, img: fileName});
+            let {name, type, content} = req.body
+            const article = await Article.create({type: type, name: name, content: content, isChecked: false})
 
-            if (info) {
-                info = JSON.parse(info)
-                info.forEach(i =>
-                    DeviceInfo.create({
-                        title: i.title,
-                        description: i.description,
-                        deviceId: device.id
-                    })
-                )
-            }
-
-            return res.json(device)
+            return res.json(article)
         } catch (e) {
             next(ApiError.badRequest(e.message))
         }
-
-
-        const {name, is_checked} = req.body
     }
 
     async getAll(req, res){
-        let {brandId, typeId, limit, page} = req.query
+        let {type, limit, page} = req.query
+
         page = page || 1
         limit = limit || 9
         let offset = page * limit - limit
-        let devices;
-        if (!brandId && !typeId) {
-            devices = await Device.findAndCountAll({limit, offset})
-        }
-        if (brandId && !typeId) {
-            devices = await Device.findAndCountAll({where:{brandId}, limit, offset})
-        }
-        if (!brandId && typeId) {
-            devices = await Device.findAndCountAll({where:{typeId}, limit, offset})
-        }
-        if (brandId && typeId) {
-            devices = await Device.findAndCountAll({where:{typeId, brandId}, limit, offset})
-        }
-        return res.json(devices)
 
+        let articles;
 
-        const article = await Article.findAll()
-        return res.json(article)
+        if (!type) {
+            articles = await Article.findAndCountAll({limit, offset})
+        }
+
+        if (type) {
+            articles = await Article.findAndCountAll({where: {type}, limit, offset})
+        }
+
+        return res.json(articles)
     }
 
     async getOne(req, res) {
         const {id} = req.params
-        const device = await Device.findOne(
+
+        const article = await Article.findOne(
             {
-                where: {id},
-                include: [{model: DeviceInfo, as: 'info'}]
-            },
+                where: {id}
+            }
         )
-        return res.json(device)
+
+        return res.json(article)
     }
 
     async delete(req, res){
+        const {id} = req.params
 
+        const article = await Article.findOne(
+            {
+                where: {id}
+            }
+        )
+
+        if (article) {
+            article.destroy()
+        }
+
+        return res.json(article)
     }
-
 }
 
 module.exports = new articleController()

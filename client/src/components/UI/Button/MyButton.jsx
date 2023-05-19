@@ -1,11 +1,12 @@
-import React from 'react';
-import {Button} from "@mui/material";
+import React from 'react'
+import {Button} from '@mui/material'
 
-
-const MyButton = () => {
+const MyButton = ({children, ...props}) => {
     return (
-        <Button variant="text">Подробнее</Button>
-    );
-};
+        <Button {...props}>
+            {children}
+        </Button>
+    )
+}
 
 export default MyButton

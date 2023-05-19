@@ -8,9 +8,11 @@ class ApiError extends Error{
     static badRequest(massage){
         return new ApiError(404, massage)
     }
+
     static internal(massage){
         return new ApiError(500, massage)
     }
+
     static forbidden(massage){
         return new ApiError(403, massage)
     }

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Grid, Typography} from "@mui/material";
 import MyBreadcrumbs from "../Breadcrumbs/MyBreadcrumbs";
 import classes from '../../../assets/MyLogo.module.css'
 import {Container} from "react-bootstrap";
+import {Context} from "../../../index";
 
 const MyHeader = () => {
+    const {user} = useContext(Context)
     return (
         <header style={{backgroundColor: "#232536", padding: "20px 0px"}}>
             <Container>

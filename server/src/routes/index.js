@@ -6,6 +6,6 @@ const homeRouter = require('./homeRouter')
 
 router.use('/home', homeRouter)
 router.use('/user', userRouter)
-router.use('/article', articleRouter)
+router.use('/store', articleRouter)
 
 module.exports = router

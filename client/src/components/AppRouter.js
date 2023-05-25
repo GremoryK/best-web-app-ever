@@ -1,5 +1,5 @@
-import React, {useContext} from 'react';
-import {Routes, Route, Navigate} from 'react-router'
+import React from 'react';
+import {Routes, Route} from 'react-router-dom'
 import {authRoutes, publicRoutes} from "../routes";
 import {HOME_ROUTE} from "../utils/consts";
 import {observer} from "mobx-react-lite";
@@ -15,7 +15,7 @@ const AppRouter = observer(() => {
             {publicRoutes.map(({path, Component}) =>
                 <Route key={path} path={path} component={Component} exact/>
             )}
-            <Navigate to={HOME_ROUTE}/>
+            <redirect to={HOME_ROUTE}/>
         </Routes>
     );
 });

@@ -1,12 +1,12 @@
 import MyHeader from "./components/UI/Header/MyHeader"
 import {BrowserRouter} from "react-router-dom";
-import AppRouter from "./components/AppRouter";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <BrowserRouter>
         <MyHeader/>
-        <AppRouter/>
+        <Home/>
     </BrowserRouter>
   )
 }

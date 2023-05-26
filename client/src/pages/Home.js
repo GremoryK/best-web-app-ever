@@ -1,5 +1,5 @@
 import React from 'react';
-import MyCarousel from "../components/UI/Carousel/MyCarousel";
+import MyCarousel from "../components/MyCarousel";
 
 const Home = () => {
     return (

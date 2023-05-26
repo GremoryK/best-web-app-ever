@@ -1,6 +1,6 @@
 import React from 'react'
 import {Card, Container} from 'react-bootstrap'
-import MyButton from '../Button/MyButton'
+import MyButton from './MyButton'
 
 const MyCard1 = () => {
     return (

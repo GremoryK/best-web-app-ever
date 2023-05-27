@@ -1,13 +1,20 @@
 import React, {useContext} from 'react';
-import {Container, Nav, Navbar} from "react-bootstrap";
+import {Container, Nav, Navbar, Button} from "react-bootstrap";
 import {Context} from "../index";
 import {observer} from "mobx-react-lite";
 import {NavLink} from "react-router-dom";
 import {ACCAUNT_ROUTE, HOME_ROUTE, LOGIN_ROUTE} from "../utils/consts";
-import {Button} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
 const MyNavbar = observer(() => {
     const {user} = useContext(Context)
+    const history = useNavigate()
+
+    const logOut = () => {
+        user.setUser({})
+        user.setIsAuth(false)
+    }
+
     return (
         <Navbar style={{backgroundColor: "#232536", padding: "20px 0px"}}>
             <Container>

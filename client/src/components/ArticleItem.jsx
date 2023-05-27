@@ -1,11 +1,11 @@
 import React from 'react';
 import {Col, Image} from "react-bootstrap";
 import Card from "react-bootstrap/Card";
-import {useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {ONEARTICLE_ROUTE} from "../utils/consts";
 
 const ArticleItem = ({article}) => {
-    const history = useHistory()
+    const history = useNavigate()
     return (
         <Col md={3} className="mt-3" onClick={() => history.push(ONEARTICLE_ROUTE) + '/' + article.id}>
             <Card style={{width: 150, cursor: 'pointer'}} border={"light"}>

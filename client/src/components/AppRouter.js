@@ -1,23 +1,23 @@
 import React from 'react';
-import {Routes, Route, Navigate} from 'react-router-dom'
+import {Routes, Route, } from 'react-router'
 import {authRoutes, publicRoutes} from "../routes";
-import {HOME_ROUTE} from "../utils/consts";
-import {observer} from "mobx-react-lite";
+import {Context} from "../index";
+import {useContext} from "react/index";
 
-const AppRouter = observer(() => {
-    const isAuth = false
+const AppRouter = () => {
+    const {user} = useContext(Context)
 
+    console.log(user)
     return (
         <Routes>
-            {isAuth && authRoutes.map(({path, Component}) =>
-                <Route key={path} path={path} element={Component} exact/>
+            {user.isAuth && authRoutes.map(({path, Component}) =>
+                <Route key={path} path={path} element={Component} exact />
             )}
             {publicRoutes.map(({path, Component}) =>
-                <Route key={path} path={path} element={Component} exact/>
+                <Route key={path} path={path} element={Component} exact />
             )}
-            <Navigate to={HOME_ROUTE}/>
         </Routes>
     );
-});
+};
 
 export default AppRouter;

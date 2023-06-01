@@ -1,12 +1,12 @@
 import React from 'react';
 import {Container} from "react-bootstrap";
 
-const CreateArticle = () => {
+const Admin = () => {
     return (
         <Container>
-            
+            <h1>Admin</h1>
         </Container>
     );
 };
 
-export default CreateArticle;
+export default Admin;

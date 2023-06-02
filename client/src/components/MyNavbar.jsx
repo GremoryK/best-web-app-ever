@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Container, Nav, Navbar, Button, Row, Col} from "react-bootstrap";
+import {Container, Nav, Navbar, Button,} from "react-bootstrap";
 import {Context} from "../index";
 import {observer} from "mobx-react-lite";
 import {ACCAUNT_ROUTE, ARTICLE_ROUTE, HOME_ROUTE, LOGIN_ROUTE} from "../utils/consts";
@@ -9,16 +9,16 @@ const MyNavbar = observer(() => {
     const {user} = useContext(Context)
     const navigate = useNavigate()
 
-    const logOut = () => {
+    {/*const logOut = () => {
         user.setUser({})
         user.setIsAuth(false)
-    }
+    }*/}
 
 
     return (
         <Navbar style={{backgroundColor: "#232536", padding: "20px 0px"}}>
-            <Container>
-                    <Nav className="ml-auto" style={{color: 'white', paddingLeft: 900}}>
+            <Container className="justify-content-end d-flex">
+                    <Nav className="ml-auto" style={{color: 'white'}}>
                         <Button variant={"link"} onClick={() => navigate(HOME_ROUTE)}>Главная</Button>
                         <Button variant={"link"} onClick={() => navigate(HOME_ROUTE)} className="ml-2">Курсы</Button>
                         <Button variant={"link"} onClick={() => navigate(ARTICLE_ROUTE)} className="ml-2">Статьи</Button>

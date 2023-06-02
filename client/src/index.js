@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from "./App";
 import UserStore from "./store/UserStore";
 import ArticleStore from "./store/ArticleStore";
-import Home from "./pages/Home";
-import Auth from "./pages/Auth";
 
 export const Context = createContext(null)
 

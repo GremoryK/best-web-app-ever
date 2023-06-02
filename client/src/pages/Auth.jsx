@@ -1,10 +1,15 @@
 import React from 'react';
-import {Container} from "react-bootstrap";
+import {Card, Container, Form} from "react-bootstrap";
 
 const Auth = () => {
     return (
-        <Container>
-            <h1>Auth</h1>
+        <Container className="d-flex justify-content-center align-items-center" style={{height: window.innerHeight - 20}}>
+            <Card style={{width: 600}} className="p-5">
+                <h2 className="m-auto">Авторизация</h2>
+            <Form>
+
+            </Form>
+            </Card>
         </Container>
     );
 };

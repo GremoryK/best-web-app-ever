@@ -1,4 +1,3 @@
-import { Carousel } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
@@ -28,7 +27,7 @@ function Home() {
                                     сферы образования и функционирующих на основе сквозных технологий
                                     IT-решений, рассмотренных в работе.
                                 </Card.Text>
-                                <div style={{paddingLeft:650}}>
+                                <div className="justify-content-end d-flex">
                                     <Button variant="link" >Подробнее</Button></div>
                             </Card.Body>
                         </Card>
@@ -38,28 +37,28 @@ function Home() {
                             <p> Ruslan Kim| 26.04.2023</p>
                             <h5>Что такое ИИ</h5>
                             <div>Искусственный интеллект в широком понимании — набор методов и моделей, получающий данные и делающий определенный вывод на их основе.</div>
-                            <div style={{paddingLeft:350}}>
+                            <div className="justify-content-end d-flex">
                                 <Button variant="link" >Подробнее</Button></div>
                         </div><br/>
                         <div style={{backgroundColor:"#ffffff", paddingBottom:6, color: "#000000", borderRadius: 5}}>
                             <p> Ruslan Kim| 26.04.2023</p>
                             <h5>Развитии ИИ в наше время</h5>
                             <div>Начиная с «нулевых» начинают внедрять разработки умного дома. Искусственный интеллект находит применение в растущей индустрии компьютерных игр.</div>
-                            <div style={{paddingLeft:350}}>
+                            <div className="justify-content-end d-flex">
                                 <Button variant="link" >Подробнее</Button></div>
                         </div><br/>
-                        <div style={{backgroundColor:"rgba(255,255,255,0.99)", paddingBottom:6, color: "#000000", borderRadius: 5}}>
+                        <div style={{backgroundColor:"#ffffff", paddingBottom:6, color: "#000000", borderRadius: 5}}>
                             <p> Ruslan Kim| 26.04.2023</p>
                             <h5>Где применяются сквозные технологии</h5>
                             <div>В данной статье рассказывается о сферах, в которых применяются сквозных технологий</div>
-                            <div style={{paddingLeft:350}}>
+                            <div className="justify-content-end d-flex">
                                 <Button variant="link" >Подробнее</Button></div>
                         </div><br/>
                         <div style={{backgroundColor:"#ffffff", paddingBottom:6, color: "#000000", borderRadius: 5}}>
                             <p> Ruslan Kim| 26.04.2023</p>
                             <h5>Отличие ИИ от нейронной сети</h5>
                             <div>ИИ решения могут работать на разных алгоритмах. Один из этих алгоритмов — нейросети.</div>
-                            <div style={{paddingLeft:350}}>
+                            <div className="justify-content-end d-flex">
                                 <Button variant="link" >Подробнее</Button></div>
                         </div><br/>
                     </Col>
@@ -112,8 +111,17 @@ function Home() {
         </Container>
             <br/><br/>
             <Container>
-                <h1 style={{textAlign: "center", fontWeight:"bolder", color:"white"}}>Ближайшие мероприятия</h1>
-
+                <Card style={{backgroundColor:"#ffffff"}}>
+                    <Card.Body>
+                        <Card.Title style={{textAlign:"center"}}>Обучение сквозыным технологиям</Card.Title>
+                        <Card.Img variant="top" src="http://www.brandlifemag.com/wp-content/uploads/2018/09/shutterstock_1055047346.jpg" />
+                        <Card.Text>
+                            У нас вы можете пройти курсы по отдельным направлениям сквозных технологий, для этого вам необходимо зарегестрироваться на курс и пройти обучение.
+                        </Card.Text>
+                        <div className="justify-content-end d-flex">
+                            <Button variant="link" >Перейти к курсам</Button></div>
+                    </Card.Body>
+                </Card>
             </Container>
         </>
     );

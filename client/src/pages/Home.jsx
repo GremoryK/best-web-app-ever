@@ -16,7 +16,7 @@ function Home() {
             <br/><br/>
             <Container>
                 <h1 style={{textAlign: "center", fontWeight:"bolder", color:"white"}}>Популярные статьи</h1>
-                <Row><Col><Card style={{ width: '50rem', backgroundColor:"#c1c3c8"}}>
+                <Row><Col><Card style={{ width: '50rem', backgroundColor:"#ffffff"}}>
                             <Card.Body>
                                 <Card.Title style={{textAlign:"center"}}>Сквозные технологии в образовании</Card.Title>
                                 <Card.Img variant="top" src="https://kapital-rus.ru/img/articles/289429.jpg" />
@@ -34,28 +34,28 @@ function Home() {
                         </Card>
                     </Col>
                     <Col >
-                        <div style={{backgroundColor:"#323335", paddingBottom: 6, color: "#c1c3c8"}}>
+                        <div style={{backgroundColor:"#ffffff", paddingBottom: 6, color: "#000000", borderRadius: 5}}>
                             <p> Ruslan Kim| 26.04.2023</p>
                             <h5>Что такое ИИ</h5>
                             <div>Искусственный интеллект в широком понимании — набор методов и моделей, получающий данные и делающий определенный вывод на их основе.</div>
                             <div style={{paddingLeft:350}}>
                                 <Button variant="link" >Подробнее</Button></div>
                         </div><br/>
-                        <div style={{backgroundColor:"#323335", paddingBottom:6, color: "#c1c3c8"}}>
+                        <div style={{backgroundColor:"#ffffff", paddingBottom:6, color: "#000000", borderRadius: 5}}>
                             <p> Ruslan Kim| 26.04.2023</p>
                             <h5>Развитии ИИ в наше время</h5>
                             <div>Начиная с «нулевых» начинают внедрять разработки умного дома. Искусственный интеллект находит применение в растущей индустрии компьютерных игр.</div>
                             <div style={{paddingLeft:350}}>
                                 <Button variant="link" >Подробнее</Button></div>
                         </div><br/>
-                        <div style={{backgroundColor:"#323335", paddingBottom:6, color: "#c1c3c8"}}>
+                        <div style={{backgroundColor:"rgba(255,255,255,0.99)", paddingBottom:6, color: "#000000", borderRadius: 5}}>
                             <p> Ruslan Kim| 26.04.2023</p>
                             <h5>Где применяются сквозные технологии</h5>
                             <div>В данной статье рассказывается о сферах, в которых применяются сквозных технологий</div>
                             <div style={{paddingLeft:350}}>
                                 <Button variant="link" >Подробнее</Button></div>
                         </div><br/>
-                        <div style={{backgroundColor:"#323335", paddingBottom:6, color: "#c1c3c8"}}>
+                        <div style={{backgroundColor:"#ffffff", paddingBottom:6, color: "#000000", borderRadius: 5}}>
                             <p> Ruslan Kim| 26.04.2023</p>
                             <h5>Отличие ИИ от нейронной сети</h5>
                             <div>ИИ решения могут работать на разных алгоритмах. Один из этих алгоритмов — нейросети.</div>
@@ -113,138 +113,8 @@ function Home() {
             <br/><br/>
             <Container>
                 <h1 style={{textAlign: "center", fontWeight:"bolder", color:"white"}}>Ближайшие мероприятия</h1>
-                <br/>
 
-
-
-
-                <Carousel>
-
-                    <Carousel.Item>
-
-                        <div className="d-flex justify-content-around">
-
-                            <Card style={{ width: '24rem' }}>
-                                <Card.Img variant="top" src="https://cityreporter.ru/wp-content/uploads/2019/10/3x0aR0XVbqI.jpg" style={{height:200}} />
-                                <Card.Body>
-                                    <Card.Title>Название мероприятия</Card.Title>
-                                    <Card.Text>
-                                        Краткое описание этого мероприятия, формы и места проведения участия
-                                    </Card.Text>
-                                    <Button variant="primary">Принять участие</Button>
-                                </Card.Body>
-                            </Card>
-
-                            <Card style={{ width: '24rem' }}>
-                                <Card.Img variant="top" src="https://sales-to-all.com/wp-content/uploads/2021/06/nematerialnaya-motivatsiya-vidy-prodazhi-vsem.jpg" style={{height:200}}/>
-                                <Card.Body>
-                                    <Card.Title>Название мероприятия</Card.Title>
-                                    <Card.Text>
-                                        Краткое описание этого мероприятия, формы и места проведения участия
-                                    </Card.Text>
-                                    <Button variant="primary">Принять участие</Button>
-                                </Card.Body>
-                            </Card>
-
-                            <Card style={{ width: '24rem' }}>
-                                <Card.Img variant="top" src="https://res.cloudinary.com/dyiieswbh/image/upload/tof1nevwb26cxnn94xg4" style={{height:200}}/>
-                                <Card.Body>
-                                    <Card.Title>Название мероприятия</Card.Title>
-                                    <Card.Text>
-                                        Краткое описание этого мероприятия, формы и места проведения участия
-                                    </Card.Text>
-                                    <Button variant="primary">Принять участие</Button>
-                                </Card.Body>
-                            </Card>
-
-                        </div>
-
-                    </Carousel.Item>
-
-                    <Carousel.Item>
-
-                        <div className="d-flex justify-content-around">
-
-                            <Card style={{ width: '24rem' }}>
-                                <Card.Img variant="top" src="https://www.ncfu.ru/export/photo2022/v-skfu-proshla-premiya-gordost-2022-ncfu.ru-04.jpg" style={{height:200}} />
-                                <Card.Body>
-                                    <Card.Title>Название мероприятия</Card.Title>
-                                    <Card.Text>
-                                        Краткое описание этого мероприятия, формы и места проведения участия
-                                    </Card.Text>
-                                    <Button variant="primary">Принять участие</Button>
-                                </Card.Body>
-                            </Card>
-
-                            <Card style={{ width: '24rem' }}>
-                                <Card.Img variant="top" src="https://sun9-53.userapi.com/impf/y9Cuiu9Ll4hU-iQM0vchJ-0oxWec0rla0G3G9g/3e0Y6womM3s.jpg?size=1024x682&quality=96&sign=8d4927b5dbb5621dd7220f4de1651e74&type=album" style={{height:200}} />
-                                <Card.Body>
-                                    <Card.Title>Название мероприятия</Card.Title>
-                                    <Card.Text>
-                                        Краткое описание этого мероприятия, формы и места проведения участия
-                                    </Card.Text>
-                                    <Button variant="primary">Принять участие</Button>
-                                </Card.Body>
-                            </Card>
-
-                            <Card style={{ width: '24rem' }}>
-                                <Card.Img variant="top" src="https://spark.ru/upload/other/b_62a89e4db523e.jpg" style={{height:200}}/>
-                                <Card.Body>
-                                    <Card.Title>Название мероприятия</Card.Title>
-                                    <Card.Text>
-                                        Краткое описание этого мероприятия, формы и места проведения участия
-                                    </Card.Text>
-                                    <Button variant="primary">Принять участие</Button>
-                                </Card.Body>
-                            </Card>
-
-                        </div>
-
-                    </Carousel.Item>
-                    <Carousel.Item>
-
-                        <div className="d-flex justify-content-around">
-
-                            <Card style={{ width: '24rem' }}>
-                                <Card.Img variant="top" src="https://cq.ru/storage/uploads/posts/1671765/1.jpg" style={{height:200}} />
-                                <Card.Body>
-                                    <Card.Title>Название мероприятия</Card.Title>
-                                    <Card.Text>
-                                        Краткое описание этого мероприятия, формы и места проведения участия
-                                    </Card.Text>
-                                    <Button variant="primary">Принять участие</Button>
-                                </Card.Body>
-                            </Card>
-
-                            <Card style={{ width: '24rem'}}>
-                                <Card.Img variant="top" src="https://avatars.mds.yandex.net/i?id=2a00000187b9b0228ca3a4579b6938fd1608-1064982-fast-images&n=13" style={{height:200}} />
-                                <Card.Body>
-                                    <Card.Title>Название мероприятия</Card.Title>
-                                    <Card.Text>
-                                        Краткое описание этого мероприятия, формы и места проведения участия
-                                    </Card.Text>
-                                    <Button variant="primary">Принять участие</Button>
-                                </Card.Body>
-                            </Card>
-
-                            <Card style={{ width: '24rem'}}>
-                                <Card.Img variant="top" src="https://new-world-rpg.ru/wp-content/uploads/f/2/8/f28c35da855a2cb6ab27f73143b0916a.jpeg" style={{height:200}} />
-                                <Card.Body>
-                                    <Card.Title>Название мероприятия</Card.Title>
-                                    <Card.Text>
-                                        Краткое описание этого мероприятия, формы и места проведения участия
-                                    </Card.Text>
-                                    <Button variant="primary">Принять участие</Button>
-                                </Card.Body>
-                            </Card>
-
-                        </div>
-
-                    </Carousel.Item>
-                </Carousel>
             </Container>
-            <br/><br/>
-
         </>
     );
 }

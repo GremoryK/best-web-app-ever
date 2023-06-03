@@ -2,7 +2,6 @@ import Admin from "./pages/Admin";
 import {
     ADMIN_ROUTE,
     ARTICLE_ROUTE,
-    ONEARTICLE_ROUTE,
     CREATEARTICLE_ROUTE,
     LOGIN_ROUTE,
     REGISTRATION_ROUTE,
@@ -50,7 +49,7 @@ export const publicRoutes = [
         element: <CreateArticle />
     },
     {
-        path: ONEARTICLE_ROUTE + '/:id',
+        path: ARTICLE_ROUTE + '/:id',
         element: <OneArticle />
     },
 ]

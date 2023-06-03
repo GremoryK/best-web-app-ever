@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import MyCarousel from "../components/MyCarousel";
 import MyFooter from "../components/MyFooter";
-import MyNavbar from "../components/MyNavbar";
 
 
 function Home() {
@@ -125,6 +124,7 @@ function Home() {
                     </Card.Body>
                 </Card>
             </Container>
+            <Container><MyFooter/></Container>
         </>
     );
 }

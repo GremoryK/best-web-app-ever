@@ -1,10 +1,21 @@
 import React from 'react';
 import {Container} from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import TypeBar from "../components/TypeBar";
+import ArticleList from "../components/ArticleList";
 
 const Article = () => {
     return (
         <Container>
-            <h1>Article</h1>
+            <Row className="mt-2">
+                <Col md={3}>
+                    <TypeBar/>
+                </Col>
+                <Col md={9}>
+                    <ArticleList/>
+                </Col>
+            </Row>
         </Container>
     );
 };

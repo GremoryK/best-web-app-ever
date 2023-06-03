@@ -9,7 +9,6 @@ function App() {
     <BrowserRouter>
         <MyNavbar/>
         <AppRouter/>
-        <Container><MyFooter/></Container>
 
     </BrowserRouter>
   )

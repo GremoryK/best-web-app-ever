@@ -2,35 +2,48 @@ import {makeAutoObservable} from "mobx";
 
 export default class ArticleStore {
     constructor() {
-        this._types = []
-        this._name = []
-        this._content = []
+        this._types = [
+            {id: 1, name: "Робототехника"},
+            {id: 2, name: "Нейросети и ИИ"},
+            {id: 3, name: "Блокчейн"},
+            {id: 4, name: "Большие данные"},
+            {id: 5, name: "VR и AR"},
+
+        ]
+        this._articles = [
+            {id: 1, name: "Робототехника", files: "https://www.digital-energy.ru/wp-content/uploads/2021/04/2019-11-14-1200.jpg", content: 'ggggggggggggggggggggg'},
+            {id: 2, name: "Нейросети и ИИ"},
+            {id: 3, name: "Блокчейн"},
+            {id: 4, name: "Большие данные"},
+            {id: 5, name: "VR и AR"},
+        ]
         this._selectedType = {}
         makeAutoObservable(this)
     }
+    setTypes(types) {
+        this._types = types
+    }
+    setArticle(articles) {
+        this._articles = articles
+    }
 
-    setNames(name) {
-        this._name = name
-    }
-    setContents(content) {
-        this._content = content
-    }
+
 
     setSelectedType(type){
         this._selectedType = type
     }
 
-    get name() {
-        return this._name
-    }
+
     get types() {
         return this._types
     }
-    get content() {
-        return this._content
-    }
+
     get selectedType() {
         return this._selectedType
+    }
+
+    get articles(){
+        return this._articles
     }
 
 }

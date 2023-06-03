@@ -1,35 +1,28 @@
 import React, {useContext} from 'react';
-import {Container, Nav, Navbar, Button,} from "react-bootstrap";
+import {Container, Nav, Navbar,} from "react-bootstrap";
 import {Context} from "../index";
 import {observer} from "mobx-react-lite";
 import {ACCAUNT_ROUTE, ARTICLE_ROUTE, HOME_ROUTE, LOGIN_ROUTE} from "../utils/consts";
-import {useNavigate} from "react-router-dom";
+
 
 const MyNavbar = observer(() => {
     const {user} = useContext(Context)
-    const navigate = useNavigate()
-
-    {/*const logOut = () => {
-        user.setUser({})
-        user.setIsAuth(false)
-    }*/}
-
 
     return (
-        <Navbar style={{backgroundColor: "#232536", padding: "20px 0px"}}>
-            <Container className="justify-content-end d-flex">
-                    <Nav className="ml-auto" style={{color: 'white'}}>
-                        <Button variant={"link"} onClick={() => navigate(HOME_ROUTE)}>Главная</Button>
-                        <Button variant={"link"} onClick={() => navigate(HOME_ROUTE)} className="ml-2">Курсы</Button>
-                        <Button variant={"link"} onClick={() => navigate(ARTICLE_ROUTE)} className="ml-2">Статьи</Button>
+            <Container className="justify-content-end d-flex" style={{backgroundColor: "#232536"}}>
+                <Navbar style={{padding: "20px 0px"}}>
+                    <Nav className="ml-auto">
+                        <Nav.Link style={{color: 'white'}} href={HOME_ROUTE}>Главная</Nav.Link>
+                        <Nav.Link style={{color: 'white'}} href={HOME_ROUTE}>Курсы</Nav.Link>
+                        <Nav.Link style={{color: 'white'}} href={ARTICLE_ROUTE}>Статьи</Nav.Link>
                         {user.isAuth ?
-                        <Button variant={"link"} onClick={() => navigate(ACCAUNT_ROUTE)}>Личный кабинет</Button>
-                    :
-                        <Button variant={"link"} onClick={() => navigate(LOGIN_ROUTE)}>Авторизация</Button>
-                    }
+                            <Nav.Link style={{color: 'white'}} href={ACCAUNT_ROUTE}>Личный кабинет</Nav.Link>
+                            :
+                            <Nav.Link style={{color: 'white'}} href={LOGIN_ROUTE}>Авторизация</Nav.Link>
+                        }
                     </Nav>
+                </Navbar>
             </Container>
-        </Navbar>
     );
 });
 

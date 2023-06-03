@@ -20,37 +20,37 @@ import Home from "./pages/Home";
 export const authRoutes = [
     {
         path: ADMIN_ROUTE,
-        Component: Admin
+        element: <Admin />
     },
     {
         path: ACCAUNT_ROUTE,
-        Component: Accaunt
+        element: <Accaunt />
     },
 ]
 
 export const publicRoutes = [
     {
         path: HOME_ROUTE,
-        Component: Home
+        element: <Home />
     },
     {
         path: ARTICLE_ROUTE,
-        Component: Article
+        element: <Article />
     },
     {
         path: LOGIN_ROUTE,
-        Component: Auth
+        element: <Auth />
     },
     {
         path: REGISTRATION_ROUTE,
-        Component: Auth
+        element: <Auth />
     },
     {
         path: CREATEARTICLE_ROUTE,
-        Component: CreateArticle
+        element: <CreateArticle />
     },
     {
         path: ONEARTICLE_ROUTE + '/:id',
-        Component: OneArticle
+        element: <OneArticle />
     },
 ]

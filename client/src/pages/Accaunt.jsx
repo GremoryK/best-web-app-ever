@@ -1,10 +1,14 @@
-import React from 'react';
-import {Container} from "react-bootstrap";
+import React, {useState} from 'react';
+import {Container, Nav} from "react-bootstrap";
+import {CREATEARTICLE_ROUTE} from "../utils/consts";
 
 const Accaunt = () => {
+
     return (
         <Container>
-            <h1>Accaunt</h1>
+            <Nav>
+                <Nav.Link style={{color: 'white'}} href={CREATEARTICLE_ROUTE}>Добавить статью</Nav.Link>
+            </Nav>
         </Container>
     );
 };

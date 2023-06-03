@@ -8,7 +8,7 @@ const ArticleItem = ({article}) => {
     const navigate = useNavigate()
     return (
         <Col md={4} onClick={() => navigate(ARTICLE_ROUTE + '/' + article.id)}>
-            <Card style={{width: 300, cursor: 'pointer', border: 'light'}}>
+            <Card className="mb-3" style={{width: 300, cursor: 'pointer', border: 'light'}}>
                 <Image width={300} height={300} src={article.files}/>
                 <div className="text-black-50">Статья 1</div>
                 <div>{article.name}</div>

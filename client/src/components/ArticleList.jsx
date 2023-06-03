@@ -9,7 +9,7 @@ const ArticleList = observer(() => {
     return (
         <Row className="d-flex">
             {article.articles.map(article =>
-            <ArticleItem key={article.id} article={article}/>
+                <ArticleItem key={article.id} article={article}/>
             )}
         </Row>
     );

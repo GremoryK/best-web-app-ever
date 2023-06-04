@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import TypeBar from "../components/TypeBar";
 import ArticleList from "../components/ArticleList";
+import {observer} from "mobx-react-lite";
+import {Context} from "../index";
+import {fetchTypes} from "../http/ArticleAPI";
 
-const Article = () => {
+const Article = observer(() => {
+    const {article} = useContext(Context)
+
+    useEffect(() => {
+        fetchTypes().then(data => article.setTypes(data))
+    }, [])
+
     return (
         <Container>
             <Row className="mt-2">
@@ -18,6 +27,6 @@ const Article = () => {
             </Row>
         </Container>
     );
-};
+});
 
 export default Article;

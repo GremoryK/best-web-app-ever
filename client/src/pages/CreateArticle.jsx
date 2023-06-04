@@ -6,6 +6,15 @@ import Button from "react-bootstrap/Button";
 
 const CreateArticle = () => {
     const {article} = useContext(Context)
+    const[name, setName] = useState('')
+    const [content, setContent] = useState('')
+    const [files, setFiles] = useState(null)
+    const [type, setType] = useState(null)
+
+    const addArticle = () => {
+
+    }
+
     return (
         <Container>
             <Form>
@@ -31,7 +40,7 @@ const CreateArticle = () => {
                     type="file"
                 />
             </Form>
-            <Button variant="outline-success" className="mt-3">
+            <Button variant="outline-success" className="mt-3" onClick={addArticle}>
                 Добавить статью
             </Button>
         </Container>

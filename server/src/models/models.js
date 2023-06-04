@@ -27,7 +27,7 @@ const UserStarredArticle = sequelize.define('user_starred_article', {
 const Article = sequelize.define('article', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     userId: {type: DataTypes.INTEGER},
-    typeId: {type: DataTypes.STRING},
+    typeId: {type: DataTypes.INTEGER},
     name: {type: DataTypes.STRING},
     content: {type: DataTypes.STRING},
     files: {type: DataTypes.STRING},

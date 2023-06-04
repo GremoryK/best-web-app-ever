@@ -16,7 +16,7 @@ const MyNavbar = observer(() => {
                         <Nav.Link style={{color: 'white'}} href={HOME_ROUTE}>Курсы</Nav.Link>
                         <Nav.Link style={{color: 'white'}} href={ARTICLE_ROUTE}>Статьи</Nav.Link>
                         {user.isAuth ?
-                            <Nav.Link style={{color: 'white'}} href={ACCAUNT_ROUTE}>Личный кабинет</Nav.Link>
+                             <Nav.Link style={{color: 'white'}} href={ACCAUNT_ROUTE}>Личный кабинет</Nav.Link>
                             :
                             <Nav.Link style={{color: 'white'}} href={LOGIN_ROUTE}>Авторизация</Nav.Link>
                         }

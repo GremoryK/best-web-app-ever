@@ -6,13 +6,14 @@ import TypeBar from "../components/TypeBar";
 import ArticleList from "../components/ArticleList";
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
-import {fetchTypes} from "../http/ArticleAPI";
+import {fetchArticle, fetchTypes} from "../http/ArticleAPI";
 
 const Article = observer(() => {
     const {article} = useContext(Context)
 
     useEffect(() => {
         fetchTypes().then(data => article.setTypes(data))
+        fetchArticle().then(data => article.setArticle(data.rows))
     }, [])
 
     return (

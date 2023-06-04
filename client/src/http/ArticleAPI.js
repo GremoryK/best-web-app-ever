@@ -11,7 +11,7 @@ export const createArticle = async (article) => {
 }
 
 export const fetchArticle = async () => {
-    const {data} = await $host.get('api/article')
+    const {data} = await $host.get('api/article/get')
     return data
 }
 

@@ -4,8 +4,9 @@ import {CREATEARTICLE_ROUTE, HOME_ROUTE} from "../utils/consts";
 import {Context} from "../index";
 import Button from "react-bootstrap/Button";
 import {useNavigate} from "react-router";
+import {observer} from "mobx-react-lite";
 
-const Accaunt = () => {
+const Accaunt = observer(() => {
     const navigate = useNavigate()
     const {user} = useContext(Context)
     const logOut = () => {
@@ -31,6 +32,6 @@ const Accaunt = () => {
 
         </Container>
     );
-};
+});
 
 export default Accaunt;

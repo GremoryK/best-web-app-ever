@@ -1,6 +1,4 @@
-import Admin from "./pages/Admin";
 import {
-    ADMIN_ROUTE,
     ARTICLE_ROUTE,
     CREATEARTICLE_ROUTE,
     LOGIN_ROUTE,
@@ -17,10 +15,7 @@ import OneArticle from "./pages/OneArticle";
 import Home from "./pages/Home";
 
 export const authRoutes = [
-    {
-        path: ADMIN_ROUTE,
-        element: <Admin />
-    },
+
     {
         path: ACCAUNT_ROUTE,
         element: <Accaunt />

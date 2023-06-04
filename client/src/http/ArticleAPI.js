@@ -6,7 +6,7 @@ export const fetchTypes = async () => {
 }
 
 export const createArticle = async (article) => {
-    const {data} = await $authHost.post('api/article', article)
+    const {data} = await $authHost.post('api/article/create', article)
     return data
 }
 

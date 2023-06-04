@@ -6,11 +6,11 @@ const path = require("path");
 class articleController {
     async create(req, res, next){
         try {
-            let {name, type, content, userId, typeId} = req.body
+            let {name, content, userId, typeId} = req.body
             const {files} = req.files
             let fileName = uuid.v4() + ".jpg"
             files.mv(path.resolve(__dirname, '..', 'static', fileName))
-            const article = await Article.create({type: type, name: name, content: content, files: fileName, userId: userId, typeId: typeId})
+            const article = await Article.create({name: name, content: content, files: fileName, userId: userId, typeId: typeId})
 
             return res.json(article)
         } catch (e) {

@@ -6,6 +6,7 @@ import ArticleItem from "./ArticleItem";
 
 const ArticleList = observer(() => {
     const {article} = useContext(Context)
+
     return (
         <Row className="d-flex">
             {article.articles.map(article =>

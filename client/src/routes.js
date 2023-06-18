@@ -20,6 +20,10 @@ export const authRoutes = [
         path: ACCAUNT_ROUTE,
         element: <Accaunt />
     },
+    {
+        path: CREATEARTICLE_ROUTE,
+        element: <CreateArticle />
+    },
 ]
 
 export const publicRoutes = [
@@ -38,10 +42,6 @@ export const publicRoutes = [
     {
         path: REGISTRATION_ROUTE,
         element: <Auth />
-    },
-    {
-        path: CREATEARTICLE_ROUTE,
-        element: <CreateArticle />
     },
     {
         path: ARTICLE_ROUTE + '/:id',

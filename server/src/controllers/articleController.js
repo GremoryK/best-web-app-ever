@@ -9,8 +9,8 @@ class articleController {
             let {name, content, userId, typeId} = req.body
             const {files} = req.files
             let fileName = uuid.v4() + ".jpg"
-            files.mv(path.resolve(__dirname, '..', 'static', fileName))
-            const article = await Article.create({name: name, content: content, files: fileName, userId: userId, typeId: typeId})
+            files.mv(path.resolve(__dirname, '..', '..', 'static', fileName))
+            const article = await Article.create({name: name, content: content, userId: userId, typeId: typeId, files: fileName})
 
             return res.json(article)
         } catch (e) {

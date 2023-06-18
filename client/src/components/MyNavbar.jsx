@@ -13,7 +13,7 @@ const MyNavbar = observer(() => {
                 <Navbar style={{padding: "20px 0px"}}>
                     <Nav className="ml-auto">
                         <Nav.Link style={{color: 'white'}} href={HOME_ROUTE}>Главная</Nav.Link>
-                        <Nav.Link style={{color: 'white'}} href={HOME_ROUTE}>Курсы</Nav.Link>
+                        <Nav.Link style={{color: 'white'}} href="http://localhost/moodle/my/">Курсы</Nav.Link>
                         <Nav.Link style={{color: 'white'}} href={ARTICLE_ROUTE}>Статьи</Nav.Link>
                         {user.isAuth ?
                              <Nav.Link style={{color: 'white'}} href={ACCAUNT_ROUTE}>Личный кабинет</Nav.Link>

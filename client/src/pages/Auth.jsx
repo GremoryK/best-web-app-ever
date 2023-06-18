@@ -14,8 +14,8 @@ const Auth = observer(() => {
     const location = useLocation()
     const navigate = useNavigate()
     const isLogin = location.pathname === LOGIN_ROUTE
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     const click = async () => {
         try{
@@ -35,9 +35,17 @@ const Auth = observer(() => {
 
     }
     return (
-        <Container className="d-flex justify-content-center align-items-center" style={{height: window.innerHeight - 20}}>
-            <Card style={{width: 600}} className="p-5">
-                <h2 className="m-auto">{isLogin ? 'Авторизация' : 'Регистрация'}</h2>
+        <Container
+                className="d-flex justify-content-center align-items-center"
+                style={{height: window.innerHeight - 20}}
+        >
+            <Card
+                style={{width: 600}}
+                className="p-5"
+            >
+                <h2 className="m-auto">
+                    {isLogin ? 'Авторизация' : 'Регистрация'}
+                </h2>
             <Form
                 className="d-flex flex-column"
             >
@@ -57,16 +65,17 @@ const Auth = observer(() => {
                 <Row
                     className="d-flex justify-content-between mt-3"
                 >
-                    {isLogin ? <div >
-                        Нет аккаунта? <NavLink to={REGISTRATION_ROUTE}>Зарегестрируйся!</NavLink>
+                    {isLogin ?
+                    <div >
+                        Нет аккаунта? <NavLink to={REGISTRATION_ROUTE}>Зарегистрируйся!</NavLink>
                     </div>
-                        :
-                        <div >
-                            Есть аккаунта? <NavLink to={LOGIN_ROUTE}>Войдите!</NavLink>
-                        </div>
+                    :
+                    <div>
+                        Есть аккаунта? <NavLink to={LOGIN_ROUTE}>Войдите!</NavLink>
+                    </div>
                     }
                     <Button
-                        variant="outline-primary"
+                        variant="outline-success"
                         onClick={click}
                     >
                         {isLogin ? 'Войти' : 'Регистрация'}

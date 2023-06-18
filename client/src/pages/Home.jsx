@@ -115,7 +115,7 @@ function Home() {
                 <Card style={{backgroundColor:"#2c2c34", color:"white"}}>
                     <Card.Body>
                         <Card.Title style={{textAlign:"center"}}>Обучение сквозыным технологиям</Card.Title>
-                        <Card.Img variant="top" src="http://www.brandlifemag.com/wp-content/uploads/2018/09/shutterstock_1055047346.jpg" />
+                        <Card.Img style={{height: 750, objectFit: "cover"}} variant="top" src="http://www.brandlifemag.com/wp-content/uploads/2018/09/shutterstock_1055047346.jpg" />
                         <Card.Text>
                             У нас вы можете пройти курсы по отдельным направлениям сквозных технологий, для этого вам необходимо зарегестрироваться на курс и пройти обучение.
                         </Card.Text>

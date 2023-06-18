@@ -5,7 +5,6 @@ export default class ArticleStore {
         this._types = []
         this._articles = []
         this._selectedType = {}
-        this._selectedArticle = {}
         makeAutoObservable(this)
     }
     setTypes(types) {
@@ -19,10 +18,6 @@ export default class ArticleStore {
 
     setSelectedType(type){
         this._selectedType = type
-    }
-
-    setSelectedArticle(article){
-        this._selectedArticle = article
     }
 
 

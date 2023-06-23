@@ -1,18 +1,15 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Container, Image} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import {useParams} from "react-router";
-import {Context} from "../index";
-import {fetchOneArticle, fetchTypes} from "../http/ArticleAPI";
+import {fetchOneArticle} from "../http/ArticleAPI";
 
 const OneArticle = () => {
-    const {article} = useContext(Context)
+    const [article, setArticle] = useState({})
     const {id} = useParams()
+    useEffect(()=> {fetchOneArticle(id).then(data => setArticle(data))}, [])
+    
 
-    useEffect(() => {
-        fetchTypes().then(data => article.setTypes(data))
-        fetchOneArticle(id).then(data => article.setArticle(data))
-    }, [])
 
     return (
         <Container>

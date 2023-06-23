@@ -11,7 +11,7 @@ const CreateArticle = observer(() => {
 
     const[name, setName] = useState('')
     const [content, setContent] = useState('')
-    const [file, setFile] = useState(null)
+    const [files, setFile] = useState(null)
 
     useEffect(() => {
         fetchTypes().then(data => article.setTypes(data))
@@ -20,10 +20,10 @@ const CreateArticle = observer(() => {
     const addArticle = () => {
         const formData = new FormData()
         formData.append('name', name)
-        formData.append('files', file)
+        formData.append('files', files)
         formData.append('typeId', article.selectedType.id)
         formData.append('content', content)
-        formData.append('userId', user.setUser.id)
+        formData.append('userId', user.user.id)
 
 
         createArticle(formData).then(data => article.setArticle(data))
